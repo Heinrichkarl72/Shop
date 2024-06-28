@@ -1,112 +1,187 @@
-<!DOCTYPE HTML>
-<!--
-	Lens by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Lens by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload-0 is-preload-1 is-preload-2">
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS-Stile für das Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #A9A9A9; /* Grauer Hintergrund */
+        }
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px; /* 1,5 mal so dick wie zuvor */
+            font-weight: bold; /* Fettgedruckte Schrift */
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .logo img {
+            height: 1em; /* Höhe des Logos gleich der Buchstabenhöhe */
+            width: auto;
+            vertical-align: middle;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li:not(:last-child) {
+            /* Hinzufügen eines vertikalen Strichs zwischen den Nav-Elementen, außer dem letzten */
+            border-right: 1px solid white;
+            padding-right: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 1em; /* Standard-Schriftgröße */
+        }
+        nav ul li a .arrow-down {
+            margin-left: 5px;
+        }
+        .search-cart {
+            display: flex;
+            align-items: center;
+        }
+        .search-cart input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .dropdown-menu {
+            position: absolute;
+            background-color: #333;
+            color: white;
+            display: none;
+            z-index: 1000;
+        }
+        .dropdown-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .dropdown-menu ul li {
+            padding: 10px;
+        }
+        .dropdown-menu ul li:hover {
+            background-color: #555;
+        }
+        .hero {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero-content {
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        .hero-content h1 {
+            font-size: 1.4em; /* Schriftgröße um 1 kleiner */
+            margin-bottom: 10px;
+        }
+        .hero-content p {
+            font-size: 1.1em; /* Schriftgröße um 1 kleiner */
+            margin-bottom: 20px;
+        }
+        .hero-content a {
+            background-color: transparent;
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-size: 0.9em; /* Schriftgröße um 1 kleiner */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                BizDeals
+                <img src="logo.png" alt="Logo" height="1em">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Produkte <span class="arrow-down">&#9660;</span></a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#">Küche</a></li>
+                            <li><a href="#">Haustier</a></li>
+                            <li><a href="#">Bad</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Angebote</a></li>
+                <li><a href="#">Über uns</a></li>
+            </ul>
+        </nav>
+        <div class="search-cart">
+            <a href="#"><img src="lupe.png" alt="Suche"></a> |
+            <a href="#">Warenkorb</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hundeboxen, Spielzeuge und weitere Haustierartikel</h1>
+                <p><a href="#" class="cta">Jetzt entdecken!</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Kontakt | AGB | Datenschutz</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
 
-		<!-- Main -->
-			<div id="main">
-
-				<!-- Header -->
-					<header id="header">
-						<h1>Lens</h1>
-						<p>Just another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-					</header>
-
-				<!-- Thumbnail -->
-					<section id="thumbnails">
-						<article>
-							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/01.jpg" alt="" /></a>
-							<h2>Diam tempus accumsan</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" /></a>
-							<h2>Vivamus convallis libero</h2>
-							<p>Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/03.jpg" data-position="top center"><img src="images/thumbs/03.jpg" alt="" /></a>
-							<h2>Nec accumsan enim felis</h2>
-							<p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" alt="" /></a>
-							<h2>Donec maximus nisi eget</h2>
-							<p>Tristique in nulla vel congue. Sed sociis natoque parturient nascetur.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/05.jpg" data-position="top center"><img src="images/thumbs/05.jpg" alt="" /></a>
-							<h2>Nullam vitae nunc vulputate</h2>
-							<p>In pellentesque cursus velit id posuere. Donec vehicula nulla.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>Phasellus magna faucibus</h2>
-							<p>Nulla dignissim libero maximus tellus varius dictum ut posuere magna.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/07.jpg"><img src="images/thumbs/07.jpg" alt="" /></a>
-							<h2>Proin quis mauris</h2>
-							<p>Etiam ultricies, lorem quis efficitur porttitor, facilisis ante orci urna.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/08.jpg"><img src="images/thumbs/08.jpg" alt="" /></a>
-							<h2>Gravida quis varius enim</h2>
-							<p>Nunc egestas congue lorem. Nullam dictum placerat ex sapien tortor mattis.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt="" /></a>
-							<h2>Morbi eget vitae adipiscing</h2>
-							<p>In quis vulputate dui. Maecenas metus elit, dictum praesent lacinia lacus.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/10.jpg"><img src="images/thumbs/10.jpg" alt="" /></a>
-							<h2>Habitant tristique senectus</h2>
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus ac tincidunt dolor.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/11.jpg"><img src="images/thumbs/11.jpg" alt="" /></a>
-							<h2>Pharetra ex non faucibus</h2>
-							<p>Ut sed magna euismod leo laoreet congue. Fusce congue enim ultricies.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/12.jpg"><img src="images/thumbs/12.jpg" alt="" /></a>
-							<h2>Mattis lorem sodales</h2>
-							<p>Feugiat auctor leo massa, nec vestibulum nisl erat faucibus, rutrum nulla.</p>
-						</article>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
-						</ul>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <script>
+        // JavaScript für das Dropdown-Menü
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownLinks = document.querySelectorAll('nav ul li a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const dropdownMenu = this.nextElementSibling;
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</body>
 </html>
