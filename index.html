@@ -22,6 +22,22 @@
             font-weight: bold; /* Fettgedruckte Schrift */
         }
         
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        .logo img {
+            height: 1em; /* Höhe des Logos gleich der Buchstabenhöhe */
+            width: auto;
+            vertical-align: middle;
+        }
+        
         nav ul {
             list-style: none;
             display: flex;
@@ -125,7 +141,7 @@
                 <li><a href="#">Produkte <span class="arrow-down">&#9660;</span></a>
                     <div class="dropdown-menu">
                         <ul>
-                            <li><a href="javascript:void(0)" onclick="openNewTab()">Küche</a></li>
+                            <li><a href="#">Küche</a></li>
                             <li><a href="#">Haustier</a></li>
                             <li><a href="#">Bad</a></li>
                         </ul>
@@ -168,10 +184,6 @@
                 });
             });
         });
-
-        function openNewTab() {
-            window.open('', '_blank');
-        }
     </script>
 </body>
 </html>
