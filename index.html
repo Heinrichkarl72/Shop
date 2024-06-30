@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online-Shop</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* CSS-Stile für das Layout */
         body {
@@ -116,7 +115,8 @@
 </head>
 <body>
     <header>
-       
+        <div class="logo-container">
+            <div class="logo">
                 BizDeals
             </div>
         </div>
@@ -125,7 +125,7 @@
                 <li><a href="#">Produkte <span class="arrow-down">&#9660;</span></a>
                     <div class="dropdown-menu">
                         <ul>
-                            <li><a href="#">Küche</a></li>
+                            <li><a href="javascript:void(0)" onclick="openNewTab()">Küche</a></li>
                             <li><a href="#">Haustier</a></li>
                             <li><a href="#">Bad</a></li>
                         </ul>
@@ -168,6 +168,10 @@
                 });
             });
         });
+
+        function openNewTab() {
+            window.open('', '_blank');
+        }
     </script>
 </body>
 </html>
