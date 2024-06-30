@@ -29,11 +29,14 @@
         .logo {
             font-size: 1.5em;
             margin-right: 10px;
+            display: flex; /* Flexbox-Layout für logo */
+            align-items: center; /* Vertikale Zentrierung der Kinder */
         }
         .logo img {
-            height: 30px; /* Höhe des Logos */
+            height: 1em; /* Höhe des Logos gleich der Buchstabenhöhe */
             width: auto;
             vertical-align: middle;
+            margin-right: 10px; /* Abstand zwischen Logo und Text */
         }
         nav ul {
             list-style: none;
@@ -129,8 +132,10 @@
 <body>
     <header>
         <div class="logo-container">
-            <a href="images/fulls/bd-logo.jpg"><img src="images/thumbs/bd-logo.jpg" alt="" /></a>
-            <div class="logo">BizDeals</div>
+            <div class="logo">
+                <img src="images/fulls/bd-logo.jpg" alt="BD Logo">
+                BizDeals
+            </div>
         </div>
         <nav>
             <ul>
